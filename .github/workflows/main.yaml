@@ -18,7 +18,7 @@ jobs:
       - run: git log -n 1
 
       - name: Run script with SENSITIVE_INFO
-        run: node ./run.js
+        run: npm run test
         env:
           SECRET_NAME: SENSITIVE_INFO
           SECRET_VALUE: ${{ secrets.SENSITIVE_INFO }}

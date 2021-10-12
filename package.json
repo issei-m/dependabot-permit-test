@@ -1,0 +1,20 @@
+{
+  "name": "dependabot-permit-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "run.js",
+  "scripts": {
+    "test": "node run.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/issei-m/dependabot-permit-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/issei-m/dependabot-permit-test/issues"
+  },
+  "homepage": "https://github.com/issei-m/dependabot-permit-test#readme"
+}
+
