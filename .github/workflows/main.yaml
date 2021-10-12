@@ -1,0 +1,25 @@
+name: Main
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  main:
+    name: Run main jobs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        if: ${{ github.event_name != 'pull_request_target' }}
+        uses: actions/checkout@v2
+
+      - run: git log -n 1
+
+      - name: Run script with SENSITIVE_INFO
+        run: node ./run.js
+        env:
+          SECRET_NAME: SENSITIVE_INFO
+          SECRET_VALUE: ${{ secrets.SENSITIVE_INFO }}
+
